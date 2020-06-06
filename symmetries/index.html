@@ -1,41 +1,114 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <style>
+    svg{
+      /* border:1px solid red; */
+    }
+    text{
+      text-anchor: middle;
+      dominant-baseline: middle;
+      fill: rgb(227, 66, 52);
+    }
 
-  svg{
-    /* border:1px solid red; */
-  }
-  text{
-    text-anchor: middle;
-    dominant-baseline: middle;
-    fill: rgb(227, 66, 52);
-  }
+    body {
+      font-family: sans-serif;
+    }
 
+    #overlay {
+      display: none; /* Hidden by default */
+      width: 20px;
+      height: 20px;
+      top: 118px;
+      left: 205px;
+      color: rgb(227, 66, 52);
+      background-color: rgba(0,0,0,0.0); /* Black background with opacity */
+      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      cursor: pointer; /* Add a pointer on hover */
+    }
+
+    div.relative {
+      position: relative;
+    }
+
+    div.absolute {
+      position: absolute;
+    }
   </style>
 </head>
 <body>
 
-  <svg width="150" height="100">
-    <defs>
-      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
-        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
-      </linearGradient>
-    </defs>
-    <rect x="20" y="0" width="90" height="60" rx="10" fill="url(#grad1)" />
-    <text x="10" y="8" font-size="16">A</text>
-  </svg>
+
+  <div id="overlay" class="absolute" onclick="off()">
+    \( \rho \)
+  </div>
+
+  <div id="container" class="relative">
+  <h2>
+    Symmetries of a rectangle
+  </h2>
+  <p style="color: darkslategray;">
+  \( \rho \) - rotation \( 180^\circ \)
+  </p>
+  <p>
+    <svg width="130" height="60">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect x="20" y="0" width="90" height="60" rx="10" fill="url(#grad1)" />
+      <text x="10" y="8" font-size="16">A</text>
+      <text x="120" y="8" font-size="16">B</text>
+      <text x="120" y="52" font-size="16">C</text>
+      <text x="10" y="52" font-size="16">D</text>
+    </svg>
+
+    <svg width="150" height="60">
+      <defs>
+        <marker id="arrowhead" markerWidth="20" markerHeight="14" refX="0" refY="7" orient="auto">
+          <polygon points="0 0, 20 7, 0 14" fill="rgb(227, 66, 52)" />
+        </marker>
+      </defs>
+      <line x1="20" y1="30" x2="110" y2="30" stroke="rgb(227, 66, 52)" stroke-width="1" marker-end="url(#arrowhead)" />
+    </svg>
+
+    <svg width="130" height="60">
+      <defs>
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect x="20" y="0" width="90" height="60" rx="10" fill="url(#grad2)" />
+      <text x="10" y="8" font-size="16">C</text>
+      <text x="120" y="8" font-size="16">D</text>
+      <text x="120" y="52" font-size="16">A</text>
+      <text x="10" y="52" font-size="16">B</text>
+    </svg>
+  </p>
+  <div>
+
+  <p>
+    <button onclick="on()">Turn on overlay effect</button>
+  </p>
 
 
-  <svg width="150" height="100">
-    <defs>
-      <marker id="arrowhead" markerWidth="20" markerHeight="14" refX="0" refY="7" orient="auto">
-        <polygon points="0 0, 20 7, 0 14" fill="rgb(227, 66, 52)" />
-      </marker>
-    </defs>
-    <line x1="20" y1="30" x2="110" y2="30" stroke="rgb(227, 66, 52)" stroke-width="1" marker-end="url(#arrowhead)" />
-  </svg>
+  <script>
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
