@@ -1,0 +1,18 @@
+<svg 
+  width="512" height="512" 
+  viewBox="0 0 256 256"
+  background-color="gray"
+  style="background-color:rgba(48,48,48,1.0)"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+<rect 
+  x="8"
+  y="8" 
+  width="498" height="498" 
+  rx="32" 
+  fill="red" stroke="orangered" stroke-width="16" stroke-linejoin="round"/>
+
+ <circle cx="255" cy="255" r="50" fill="yellow"/>
+
+</svg>
