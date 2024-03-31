@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920 1080"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">635
+      <stop
+        style="stop-color:#27252b;stop-opacity:1;"
+        offset="0"
+        id="stop1" />
+      <stop
+        style="stop-color:#9b273f;stop-opacity:1;"
+        offset="0.5"
+        id="stop6" />
+      <stop
+        style="stop-color:#ea9a29;stop-opacity:1;"
+        offset="1"
+        id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#2a2531;stop-opacity:1;"
+         offset="0.06313131"
+         id="stop2" />
+      <stop
+         style="stop-color:#892542;stop-opacity:1;"
+         offset="0.24904677"
+         id="stop4" />
+      <stop
+         style="stop-color:#e68a2d;stop-opacity:1;"
+         offset="0.52777779"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="415.25812"
+       y1="-100.84666"
+       x2="405.92471"
+       y2="1079.3489"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient5"
+       x1="496.44479"
+       y1="1078.6145"
+       x2="499.63126"
+       y2="262.39233"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient3);fill-opacity:1;stroke-width:0.322929"
+       id="rect1"
+       width="1920"
+       height="1080"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:url(#linearGradient5);stroke:#782121;stroke-width:1.058;fill-opacity:1"
+       id="rect2"
+       width="1920"
+       height="691"
+       x="0"
+       y="388" />
+  </g>
+</svg>
