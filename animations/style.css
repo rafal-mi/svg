@@ -1,0 +1,4 @@
+rect {
+  fill: navy; 
+  transform: translateY(calc(50% - 4px))
+}

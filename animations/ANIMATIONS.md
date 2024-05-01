@@ -1,0 +1,1 @@
+[How to animate SVG with CSS: Tutorial with examples](https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/)

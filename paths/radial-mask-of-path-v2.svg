@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="800"
+  height="800"
+  viewBox="0 0 800 800"
+  >
+<defs>
+  <radialGradient 
+    cx="0.5" cy="0.2" r="0.7"
+    id="radial-grad">
+    <stop stop-color="white" stop-opacity="1" offset="0%" >
+    </stop>
+    <stop stop-color="white" stop-opacity="1" offset="80%" >
+    </stop>
+    <stop stop-color="black" stop-opacity="1" offset="100%" >
+    </stop>
+  </radialGradient>
+  <mask id="mask">
+    <circle
+      cx="400" cy="400" r="200"
+      fill="url(#radial-grad)"
+      />
+  </mask>
+
+</defs>
+<circle 
+  visibility="hidden"
+  cx="400" cy="400" r="200"
+  fill="url(#radial-grad)"
+  />
+
+
+<path 
+  visibility="visible" 
+  d="M227,500 A200,200 0 0 0 573,500"
+  fill="hsl(5, 100%, 64%)"
+  mask="url(#mask)"
+  />
+</svg>

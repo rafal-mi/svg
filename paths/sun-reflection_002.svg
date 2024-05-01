@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+width="800" height="800" >
+<style>
+  circle {
+    visibility: visible;
+  }
+</style>
+<defs>
+  <linearGradient 
+    x1="50%" y1="0%" x2="50%" y2="100%" 
+    id="nnneon-grad">
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity="1" offset="0%" 
+      style="--darkreader-inline-stopcolor: #00c089;" 
+      data-darkreader-inline-stopcolor="">
+    </stop>
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity="1" offset="50%" 
+      style="--darkreader-inline-stopcolor: #00c089;" 
+      data-darkreader-inline-stopcolor="">
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity="1" offset="100%" 
+      style="--darkreader-inline-stopcolor: #9f0b53;" 
+      data-darkreader-inline-stopcolor="">
+    </stop>
+  </linearGradient>
+  <radialGradient 
+    cx="0.5" cy="0" r="1"
+    fx="0.5" fy="0" fr="0.9"
+    id="radial-grad">
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity="1" offset="0%" >
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity="1" offset="50%" >
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity="1" offset="100%" >
+    </stop>
+  </linearGradient>
+
+
+  <filter id="nnneon-filter1" x="-200%" y="-200%" 
+    width="400%" height="400%" 
+    filterUnits="objectBoundingBox" 
+    primitiveUnits="userSpaceOnUse" 
+    color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="4 4" 
+      x="0%" y="0%" 
+      width="100%" height="100%" 
+      in="SourceGraphic"
+      edgeMode="none" result="blur">
+    </feGaussianBlur>
+  <filter id="nnneon-filter2" x="-200%" y="-200%" 
+    width="400%" height="400%" 
+    filterUnits="objectBoundingBox" 
+    primitiveUnits="userSpaceOnUse" 
+    color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="16 8" 
+      x="0%" y="0%" 
+      width="100%" height="100%" 
+      in="SourceGraphic" 
+      edgeMode="none" result="blur">
+    </feGaussianBlur>
+  </filter>
+
+</defs>
+<g>
+  <rect
+  x="0" y="200"
+  width="800" height="400"
+  fill="#483c3eff"
+
+    />
+  <rect 
+    x="220" y="200" 
+    width="360" height="4" 
+    fill="#f4b42dff"
+    />
+  <rect 
+    x="200" y="200" 
+    width="400" height="10" 
+    fill="#f4b42dff"
+    filter="url(#nnneon-filter1)"
+    />
+  <path d="M200,200  
+    A300,300 0 0 0 600,200
+    M200,200"
+    fill="url(#nnneon-grad)"
+    filter="url(#nnneon-filter2)"
+    />
+</g>
+<circle 
+  cx="400" cy="400" 
+  r="300" ry="200" 
+  stroke="white"
+  fill="url(#radial-grad)"/>
+  <!--
+f4b42dff
+
+  -->
+</svg>

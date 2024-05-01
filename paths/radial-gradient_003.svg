@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  >
+<style>
+  circle {
+    visibility: hidden;
+  }
+
+  /* rect {
+    visibility: visible;
+  } */
+
+  #sun {
+    fill: white;
+  }
+</style>
+<defs>
+  <radialGradient 
+    cx="0.5" cy="0" r="1"
+    fx="0.5" fy="0" fr="0.7"
+    id="radial-grad">
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity="1" offset="0%" >
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity="1" offset="50%" >
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity="1" offset="100%" >
+    </stop>
+  </radialGradient>
+
+  <linearGradient
+    x1="0" x2="0" y1="1" y2="0"
+    id="seaGradient" >
+    <stop
+      style="stop-color:#5b5155;stop-opacity:1;"
+      offset="0"
+      id="stop9" />
+    <stop
+      style="stop-color:#534a4c;stop-opacity:1;"
+      offset="0.73382902"
+      id="stop11" />
+    <stop
+      style="stop-color:#483c3e;stop-opacity:1;"
+      offset="0.9580645"
+      id="stop12" />
+    <stop
+      style="stop-color:#3e2e30;stop-opacity:1;"
+      offset="1"
+      id="stop10" />
+  </linearGradient>
+
+  <linearGradient
+       id="lightSkyGradient"
+       x1="1065"
+       y1="730"
+       x2="1065"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+
+       >
+    <stop
+         style="stop-color:#ff7101;stop-opacity:1;"
+         offset="0"
+         id="stop4" /><stop
+         style="stop-color:#f52b2d;stop-opacity:1;"
+         offset="0.24004537"
+         id="stop6" /><stop
+         style="stop-color:#9f2d32;stop-opacity:1;"
+         offset="0.43026355"
+         id="stop7" /><stop
+         style="stop-color:#492f38;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+  </linearGradient>
+
+  <filter id="nnneon-filter" x="-200%" y="-100%" 
+    width="500%" height="400%" 
+    filterUnits="objectBoundingBox" 
+    primitiveUnits="userSpaceOnUse" 
+    color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="17 8" 
+      x="0%" y="0%" 
+      width="100%" height="100%" 
+      in="SourceGraphic" 
+      edgeMode="none" result="blur">
+    </feGaussianBlur>
+  </filter>
+</defs>
+
+<!-- <rect
+  id="light-sky"
+  x="0" y="0" width="1920" height="720"
+  fill="url(#lightSkyGradient)"
+  visibility="hidden"
+  /> -->
+
+<rect
+  id="sea"
+  x="0" y="720" width="1920" height="360"
+  fill="url(#seaGradient)"
+  />
+
+<circle 
+  cx="400" cy="400" 
+  r="300" ry="200" 
+  stroke="white"
+  fill="url(#radial-grad)"
+  />
+  
+<ellipse
+  id="sun-reflection"
+  cx="960" cy="640" 
+  rx="300" ry="200" 
+  stroke="white"
+  fill="url(#radial-grad)"
+  filter="url(#nnneon-filter)"
+  />
+
+<rect
+  id="light-sky"
+  x="0" y="0" width="1920" height="720"
+  fill="url(#lightSkyGradient)"
+  visibility="visible"
+  />
+
+<path id="sun" 
+  d="M700,720 A500,840 0 0 1 1220,720"
+  visibility="visible"
+  
+/>
+  <!--
+
+  -->
+</svg>

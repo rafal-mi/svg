@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  >
+<style>
+  #sun {
+    fill: white;
+  }
+</style>
+<defs>
+  <radialGradient 
+    cx="0.5" cy="-0.3" r="1.2"
+    fx="0.5" fy="-0.5" fr=".6"
+    id="radial-grad">
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity=".8" offset="0%" >
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity=".8" offset="50%" >
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity=".8" offset="100%" >
+    </stop>
+  </radialGradient>
+  <radialGradient 
+    cx="0.5" cy="-0.1" r="0.3"
+    id="mask-grad">
+    <stop stop-color="white" offset="0%" >
+    </stop>
+    <stop stop-color="white" offset="90%" >
+    </stop>
+    <stop stop-color="black" offset="100%" >
+    </stop>
+  </radialGradient>
+
+  <linearGradient
+       id="lightSkyGradient"
+       x1="1065"
+       y1="730"
+       x2="1065"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+
+       >
+    <stop
+         style="stop-color:#ff7101;stop-opacity:1;"
+         offset="0"
+         id="stop4" /><stop
+         style="stop-color:#f52b2d;stop-opacity:1;"
+         offset="0.24004537"
+         id="stop6" /><stop
+         style="stop-color:#9f2d32;stop-opacity:1;"
+         offset="0.43026355"
+         id="stop7" /><stop
+         style="stop-color:#492f38;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+  </linearGradient>
+
+  <filter id="neon-filter" x="-200%" y="-100%" 
+    width="500%" height="400%" 
+    filterUnits="objectBoundingBox" 
+    primitiveUnits="userSpaceOnUse" 
+    color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="17 8" 
+      x="0%" y="0%" 
+      width="100%" height="100%" 
+      in="SourceGraphic" 
+      edgeMode="none" result="blur">
+    </feGaussianBlur>
+  </filter>
+
+  <filter id="neon-filter-bar" x="-100%" y="-200%" 
+    width="300%" height="500%" 
+    filterUnits="objectBoundingBox" 
+    primitiveUnits="userSpaceOnUse" 
+    color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="4 4" 
+      x="0%" y="0%" 
+      width="100%" height="100%" 
+      in="SourceGraphic" 
+      edgeMode="none" result="blur">
+    </feGaussianBlur>
+  </filter>
+  <filter id="neon-filter-halo" x="-200%" y="-200%" 
+    width="500%" height="500%" 
+    filterUnits="objectBoundingBox" 
+    primitiveUnits="userSpaceOnUse" 
+    color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="36 16" 
+      x="0%" y="0%" 
+      width="100%" height="100%" 
+      in="SourceGraphic" 
+      edgeMode="none" result="blur">
+    </feGaussianBlur>
+  </filter>
+  <filter id="neon-filter-halo2" x="-200%" y="-300%" 
+    width="500%" height="700%" 
+    filterUnits="objectBoundingBox" 
+    primitiveUnits="userSpaceOnUse" 
+    color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="17 32" 
+      x="0%" y="0%" 
+      width="100%" height="100%" 
+      in="SourceGraphic" 
+      edgeMode="none" result="blur">
+    </feGaussianBlur>
+  </filter>
+  <filter id="clip-blur" x="-200%" y="-100%" 
+    width="500%" height="300%" 
+    filterUnits="objectBoundingBox" 
+    primitiveUnits="userSpaceOnUse" 
+    color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="17 4" 
+      x="0%" y="0%" 
+      width="100%" height="100%" 
+      in="SourceGraphic" 
+      edgeMode="none" result="blur">
+    </feGaussianBlur>
+  </filter>
+
+  <filter id="linear" x="0" y="0" width="100%" height="100%">
+    <feComponentTransfer result="r1">
+      <feFuncR type="linear" slope="4" intercept="0"></feFuncR>
+      <feFuncG type="linear" slope="4" intercept="0"></feFuncG>
+      <feFuncB type="linear" slope="4" intercept="0"></feFuncB>
+    </feComponentTransfer>
+  </filter>
+
+  <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+    <image height="1" width="1" preserveAspectRatio="none" xlink:href="sea.png" />
+  </pattern>
+
+</defs>
+
+<rect
+  id="sea"
+  x="0" y="720" width="1920" height="360"
+  fill="url(#pattern1)"
+  />
+
+<rect
+  id="light-sky"
+  x="0" y="0" width="1920" height="720"
+  fill="url(#lightSkyGradient)"
+  visibility="visible"
+  />
+
+<path id="sun" 
+  d="M700,730 A300,300 0 0 1 1220,730"
+  filter="url(#neon-filter)"
+  visibility="visible"
+
+/>
+
+<!-- Reflection -->
+
+<clipPath id="sea-clip">
+  <path d="M720,720 A480,480 0 0 0 1210,720" />
+</clipPath>
+<mask id="mask">
+  <path d="M720,720 A480,480 0 0 0 1210,720" 
+  fill="url(#mask-grad)"
+  />
+</mask>
+<use href="#sea"
+  transform="translate(0 -300)"
+  clip-path="url(#sea-clip)"
+  mask="url(#mask)"
+  filter="url(#linear)"
+  />
+
+<group id="halo" visibility="hidden">
+<rect id="bar"
+  x="715" y="717"
+  width="500" height="10"
+  fill="hsl(41, 93%, 51%)"
+  filter="url(#neon-filter-bar)"
+  />
+
+<path id="sun-reflection" 
+  d="M700,720 A500,500 0 0 0 1220,720"
+  fill="url(#radial-grad)"
+  filter="url(#neon-filter)"
+  visibility="visible"
+  />
+
+<path id="sun-halo" 
+  d="M680,720 A600,600 0 0 0 1240,720"
+  stroke="hsl(3, 93%, 61%)"
+  stroke-width="18px"
+  stroke-opacity=".95"
+  fill="none"
+  filter="url(#neon-filter-halo)"
+  /> 
+
+<path id="sun-halo2" 
+  d="M700,720 A600,600 0 0 0 1220,720"
+  stroke="hsl(355, 93%, 66%)"
+  stroke-width="2px"
+  stroke-opacity=".99"
+  fill="none"
+  filter="url(#neon-filter-halo2)"
+  />
+</group>
+
+
+
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="800"
+  height="800"
+  viewBox="0 0 800 800"
+  >
+<style>
+  circle {
+    visibility: visible;
+  }
+
+  /* rect {
+    visibility: visible;
+  } */
+
+  #sun {
+    fill: white;
+  }
+</style>
+<defs>
+  <radialGradient 
+    cx="0.5" cy="0.5" r="0.4"
+    fx="0.5" fy="0.5" fr=".2"
+    id="radial-grad">
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity="1" offset="0%" >
+    </stop>
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity="1" offset="50%" >
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity="1" offset="100%" >
+    </stop>
+  </radialGradient>
+  <radialGradient 
+    cx="0.5" cy="-0.5" r=".9"
+    fx="0.5" fy="-0.5" fr=".1"
+    id="radial-grad2">
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity="1" offset="0%" >
+    </stop>
+    <stop stop-color="hsl(41, 93%, 51%)" stop-opacity="1" offset="50%" >
+    </stop>
+    <stop stop-color="hsl(5, 100%, 64%)" stop-opacity="1" offset="100%" >
+    </stop>
+  </radialGradient>
+</defs>
+
+<circle
+  cx="200" cy="400"
+  r="200"
+  fill="url(#radial-grad)"
+  />
+
+<path d="M427,500 A200,200 0 0 0 773,500"
+  fill="url(#radial-grad2)"
+  />
+</svg>

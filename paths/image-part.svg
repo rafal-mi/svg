@@ -1,0 +1,26 @@
+<svg version="1.1" width="512px" height="512px" viewbox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">   <defs>
+    <radialGradient id="waveFill" r="5%" spreadMethod="reflect">
+      <stop offset="0%" stop-opacity="1.00"/>
+      <stop offset="20%" stop-opacity="0.90"/>
+      <stop offset="40%" stop-opacity="0.65"/>
+      <stop offset="60%" stop-opacity="0.35"/>
+      <stop offset="80%" stop-opacity="0.10"/>
+      <stop offset="100%" stop-opacity="0.00"/>
+    </radialGradient>
+
+      <rect id="waveImg" width="100%" height="100%" stroke="none" fill="url(#waveFill)"/>
+
+    <filter id="waveFilter" primitiveUnits="objectBoundingBox">
+      <feImage xlink:href="#waveImg" x="0%" y="0%" width="100%" height="100%" result="waves"/>
+      <!-- feSpecularLighting and so on will be added later on -->
+      <feComposite operator="atop" in="waves" in2="SourceGraphic"/>
+    </filter>   
+     </defs>  
+     <g transform="translate(256 256)">
+
+
+    <ellipse rx="200" ry="100" fill="#0000ff" stroke="none"
+             filter="url(#waveFilter)"/>
+    <ellipse rx="200" ry="100" fill="none" stroke="#ff0000"/>   </g> </svg>
