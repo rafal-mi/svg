@@ -12,16 +12,17 @@
   </div>
 
   <script>
+    var width = 1920;
+    var height = 2080;
     var ns = 'http://www.w3.org/2000/svg'
     var div = document.getElementById('drawing') 
     var svg = document.createElementNS(ns, 'svg')
-    svg.setAttributeNS(null, 'width', '100%')
-    svg.setAttributeNS(null, 'height', '100%')
+    svg.setAttributeNS(null, 'viewBox', `0 0 ${width} ${height}`)
     div.appendChild(svg)
     var rect = document.createElementNS(ns, 'rect')
-    rect.setAttributeNS(null, 'width', 100)
-    rect.setAttributeNS(null, 'height', 100)
-    rect.setAttributeNS(null, 'fill', '#f06')
+    rect.setAttributeNS(null, 'width', 1980)
+    rect.setAttributeNS(null, 'height', 480)
+    rect.setAttributeNS(null, 'fill', '')
     svg.appendChild(rect)
   </script>
 </body>

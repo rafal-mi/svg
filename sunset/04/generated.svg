@@ -1,0 +1,29 @@
+<svg viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow-filter" x="-100%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15"></feGaussianBlur>
+    </filter>
+  </defs>
+  <rect x="0" y="600" width="1920" height="480" fill="hsl(234, 44%, 25%)"></rect>
+  <rect x="0" y="0" width="1920" height="600" fill="hsl(354, 88%, 71%)"></rect>
+  <circle cx="960" cy="420" r="100" fill="hsl(40, 100%, 88%)"></circle>
+  <g id="reflection-bar-g">
+    <rect x="860" y="600" width="200" height="4" fill="white"></rect>
+    <rect x="860" y="596" width="200" height="12" fill="white" filter="url(#glow-filter)"></rect>
+  </g>
+  <use href="#reflection-bar-g" x="0" y="8"></use>
+  <use href="#reflection-bar-g" x="0" y="17.6"></use>
+  <use href="#reflection-bar-g" x="0" y="29.12"></use>
+  <use href="#reflection-bar-g" x="0" y="42.944"></use>
+  <use href="#reflection-bar-g" x="0" y="59.5328"></use>
+  <use href="#reflection-bar-g" x="0" y="79.43936"></use>
+  <use href="#reflection-bar-g" x="0" y="103.327232"></use>
+  <use href="#reflection-bar-g" x="0" y="131.9926784"></use>
+  <use href="#reflection-bar-g" x="0" y="166.39121408"></use>
+  <use href="#reflection-bar-g" x="0" y="207.66945689599999"></use>
+  <use href="#reflection-bar-g" x="0" y="257.20334827519997"></use>
+  <use href="#reflection-bar-g" x="0" y="316.64401793023995"></use>
+  <use href="#reflection-bar-g" x="0" y="387.9728215162879"></use>
+  <use href="#reflection-bar-g" x="0" y="473.5673858195455"></use>
+  <use href="#reflection-bar-g" x="0" y="576.2808629834545"></use>
+</svg>

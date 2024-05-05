@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sunset</title>
 </head>
 <body>
 
@@ -12,19 +12,120 @@
   </div>
 
   <script>
+    var imageWidth = 1920;
+    var imageHeight = 1080;
     var ns = 'http://www.w3.org/2000/svg'
     var div = document.getElementById('drawing') 
     var svg = document.createElementNS(ns, 'svg')
     svg.setAttributeNS(null, 'viewBox', '0 0 1920 1080')
     div.appendChild(svg)
+  
+    // Begin defs 
+    //
+    var defs = document.createElementNS(ns, "defs");
+    svg.appendChild(defs);
 
+    // Glow filter
+    //
+    var filter = document.createElementNS(ns, "filter");
+    filter.setAttribute("id", "glow-filter");
+    filter.setAttribute("x", "-100%");
+    filter.setAttribute("y", "-200%");
+    filter.setAttribute("width", "200%");
+    filter.setAttribute("height", "500%");
+
+    var gaussianFilter = document.createElementNS(ns, "feGaussianBlur");
+    gaussianFilter.setAttribute("in","SourceGraphic");
+    gaussianFilter.setAttribute("stdDeviation","15");
+
+    filter.appendChild(gaussianFilter);
+    defs.appendChild(filter);
+    svg.appendChild(defs);
+    //
+    // End defs
+
+    // Sea
+    //
+    var seaHeight = 480;
     var rect = document.createElementNS(ns, 'rect')
     rect.setAttributeNS(null, 'x', 0)
-    rect.setAttributeNS(null, 'y', 600)
-    rect.setAttributeNS(null, 'width', 1920)
-    rect.setAttributeNS(null, 'height', 480)
+    rect.setAttributeNS(null, 'y', imageHeight - seaHeight)
+    rect.setAttributeNS(null, 'width', imageWidth)
+    rect.setAttributeNS(null, 'height', seaHeight)
     rect.setAttributeNS(null, 'fill', 'hsl(234, 44%, 25%)')
     svg.appendChild(rect)
-  </script>
+
+    // Sky
+    //
+    rect = document.createElementNS(ns, 'rect')
+    rect.setAttributeNS(null, 'x', 0)
+    rect.setAttributeNS(null, 'y', 0)
+    rect.setAttributeNS(null, 'width', 1920)
+    rect.setAttributeNS(null, 'height', 600)
+    rect.setAttributeNS(null, 'fill', 'hsl(354, 88%, 71%)')
+    svg.appendChild(rect)
+
+    // Sun
+    //
+    var sunRadius = 100;
+    var x = imageWidth / 2;
+    var y = imageHeight - seaHeight - sunRadius * 1.8;
+    var r = sunRadius;
+    c = document.createElementNS(ns, 'circle')
+    c.setAttributeNS(null, 'cx', x)
+    c.setAttributeNS(null, 'cy', y)
+    c.setAttributeNS(null, 'r', r)
+    c.setAttributeNS(null, 'fill', 'hsl(40, 100%, 88%)')
+    svg.appendChild(c)
+
+
+    var g = document.createElementNS(ns, 'g');
+    g.setAttribute('id', 'reflection-bar-g');
+
+    // Reflection bar
+    //
+    var seaY = imageHeight - seaHeight;
+    x = Math.floor(imageWidth / 2) - sunRadius;
+    var w = 2 * sunRadius;
+    var h = 4;
+    rect = document.createElementNS(ns, 'rect')
+    rect.setAttributeNS(null, 'x', x)
+    rect.setAttributeNS(null, 'y', seaY)
+    rect.setAttributeNS(null, 'width', 2 * sunRadius)
+    rect.setAttributeNS(null, 'height', h)
+    rect.setAttributeNS(null, 'fill', 'white');
+    g.appendChild(rect)
+
+    // Reflection bar glow
+    //
+    rect = document.createElementNS(ns, 'rect')
+    rect.setAttributeNS(null, 'x', x)
+    rect.setAttributeNS(null, 'y', seaY - h)
+    rect.setAttributeNS(null, 'width', 2 * sunRadius)
+    rect.setAttributeNS(null, 'height', 3 * h)
+    rect.setAttributeNS(null, 'fill', 'white');
+    rect.setAttributeNS(null, 'filter', 'url(#glow-filter)');
+    
+    g.appendChild(rect)
+    svg.appendChild(g);
+
+    var dy = 8;
+    var u = document.createElementNS(ns, 'use');
+    u.setAttribute('href', '#reflection-bar-g');
+    u.setAttribute('x', 0);
+    u.setAttribute('y', dy);
+    svg.appendChild(u);
+
+    y = dy;
+    while(y < seaHeight) {
+      dy = dy * 1.2;
+      y += dy;
+      u = document.createElementNS(ns, 'use');
+      u.setAttribute('href', '#reflection-bar-g');
+      u.setAttribute('x', 0);
+      u.setAttribute('y', y);
+      svg.appendChild(u);
+    }
+</script>
 </body>
 </html>
