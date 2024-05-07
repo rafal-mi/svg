@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="400"
+  height="400"
+  viewBox="0 0 400 400"
+  >
+  <g id="g1">
+  <line id="line" 
+    x1="100" y1="100" x2="300" y2="100"
+    stroke="red"
+    />
+  </g>
+
+  <use href="#g1" 
+    transform="rotate(15 200 50)"
+    />
+
+</svg>

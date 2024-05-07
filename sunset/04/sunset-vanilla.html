@@ -112,8 +112,9 @@
     var dy = 8;
     var u = document.createElementNS(ns, 'use');
     u.setAttribute('href', '#reflection-bar-g');
-    u.setAttribute('x', 0);
-    u.setAttribute('y', dy);
+    u.setAttribute('transform', `translate(0, ${dy}) rotate(-5 ${imageWidth / 2} ${imageHeight - seaHeight + dy / 2})`);
+    // u.setAttribute('x', 0);
+    // u.setAttribute('y', dy);
     svg.appendChild(u);
 
     y = dy;
@@ -126,6 +127,16 @@
       u.setAttribute('y', y);
       svg.appendChild(u);
     }
+
+    rect = document.createElementNS(ns, 'rect');
+    rect.setAttribute('x', imageWidth / 2 - sunRadius)
+    rect.setAttribute('y', 800);
+    rect.setAttribute('width', 2 * sunRadius);
+    rect.setAttribute('height', h);
+    rect.setAttribute('fill', 'yellow');
+    svg.appendChild(rect);
+
+    
 </script>
 </body>
 </html>
