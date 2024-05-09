@@ -112,19 +112,22 @@
     var dy = 8;
     var u = document.createElementNS(ns, 'use');
     u.setAttribute('href', '#reflection-bar-g');
-    u.setAttribute('transform', `translate(0, ${dy}) rotate(-5 ${imageWidth / 2} ${imageHeight - seaHeight + dy / 2})`);
+    // u.setAttribute('transform', `translate(0, ${dy})`);
+    u.setAttribute('transform', `translate(0, ${dy}) rotate(-5 ${imageWidth / 2} ${imageHeight - seaHeight + dy})`);
     // u.setAttribute('x', 0);
     // u.setAttribute('y', dy);
     svg.appendChild(u);
 
     y = dy;
     while(y < seaHeight) {
-      dy = dy * 1.2;
+      dy = dy * 1.1;
+      var y_ = y;
       y += dy;
       u = document.createElementNS(ns, 'use');
       u.setAttribute('href', '#reflection-bar-g');
       u.setAttribute('x', 0);
       u.setAttribute('y', y);
+      u.setAttribute('transform', `rotate(-3 ${imageWidth / 2} ${imageHeight - seaHeight + y_})`);
       svg.appendChild(u);
     }
 
@@ -134,7 +137,7 @@
     rect.setAttribute('width', 2 * sunRadius);
     rect.setAttribute('height', h);
     rect.setAttribute('fill', 'yellow');
-    svg.appendChild(rect);
+//    svg.appendChild(rect);
 
     
 </script>
