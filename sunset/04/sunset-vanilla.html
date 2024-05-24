@@ -12,6 +12,8 @@
   </div>
 
   <script>
+    var sunColor = 'hsl(40, 100%, 88%)';
+
     var imageWidth = 1920;
     var imageHeight = 1080;
     var ns = 'http://www.w3.org/2000/svg'
@@ -41,6 +43,36 @@
     filter.appendChild(gaussianFilter);
     defs.appendChild(filter);
     svg.appendChild(defs);
+
+    // Sun gradient
+    //
+    var gradient = document.createElementNS(ns, 'radialGradient');
+    gradient.id = "sun-halo-gradient";
+    var stops = [
+      {
+        color: sunColor,
+        offset: '0%',
+        opacity: '100%'
+      },
+      {
+        color: sunColor,
+        offset: '50%',
+        opacity: '100%'        
+      },
+      {
+        color: sunColor,
+        offset: '100%',
+        opacity: '0%'        
+      },
+    ];
+    for(let s of stops) {
+      var stop = document.createElementNS(ns, 'stop');
+      stop.setAttribute('offset', s.offset);
+      stop.setAttribute('stop-color', s.color);
+      stop.setAttribute('stop-opacity', s.opacity);
+      gradient.appendChild(stop);
+    }
+    defs.appendChild(gradient);
     //
     // End defs
 
@@ -78,12 +110,21 @@
     c.setAttributeNS(null, 'fill', 'hsl(40, 100%, 88%)')
     svg.appendChild(c)
 
-
-    var g = document.createElementNS(ns, 'g');
-    g.setAttribute('id', 'reflection-bar-g');
+    // Sun halo
+    //
+    var haloRadius = 180;
+    c = document.createElementNS(ns, 'circle')
+    c.setAttributeNS(null, 'cx', x)
+    c.setAttributeNS(null, 'cy', y)
+    c.setAttributeNS(null, 'r', haloRadius)
+    c.setAttribute('fill', 'url(#sun-halo-gradient)')
+    svg.appendChild(c);
 
     // Reflection bar
     //
+    var g = document.createElementNS(ns, 'g');
+    g.setAttribute('id', 'reflection-bar-g');
+
     var seaY = imageHeight - seaHeight;
     x = Math.floor(imageWidth / 2) - sunRadius;
     var w = 2 * sunRadius;
