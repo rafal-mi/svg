@@ -1,0 +1,13 @@
+ <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+    <radialGradient id="RadialGradient1">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="orange" />
+    </radialGradient>
+  </defs>
+  <circle cx="25" cy="25" r="20" fill="yellow" />
+  <circle cx="70" cy="25" r="20" 
+    fill="url(#RadialGradient1)" 
+    transform="scale(1,2)" 
+    />
+</svg> 
