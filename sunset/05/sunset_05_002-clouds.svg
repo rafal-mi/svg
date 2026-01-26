@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
-   sodipodi:docname="sunset_001_002-clouds.svg"
+   sodipodi:docname="sunset_05_002-clouds.svg"
    inkscape:export-filename="sunset_001_001.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -28,8 +28,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="0.1712966"
-     inkscape:cx="1380.6462"
-     inkscape:cy="1345.6192"
+     inkscape:cx="1377.7273"
+     inkscape:cy="1339.7814"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -44,7 +44,7 @@
        inkscape:collect="always">
       <stop
          style="stop-color:#5200b0;stop-opacity:0;"
-         offset="0.00255102"
+         offset="0"
          id="stop5" />
       <stop
          style="stop-color:#5200b0;stop-opacity:1;"
@@ -84,10 +84,10 @@
        inkscape:collect="always"
        xlink:href="#linearGradient5"
        id="radialGradient32"
-       cx="526.16345"
-       cy="273.89328"
-       fx="526.16345"
-       fy="273.89328"
+       cx="516.89587"
+       cy="451.72647"
+       fx="516.89587"
+       fy="451.72647"
        r="532.20953"
        gradientTransform="matrix(1,0,0,0.51245169,0,133.53621)"
        gradientUnits="userSpaceOnUse" />
