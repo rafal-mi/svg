@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="1920" height="1200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="RadialGradient1"
+        cx="0.25"
+        cy="0.5"
+        gradientTransform="scale(2, 1)">
+      <stop offset="0%" stop-color="hsla(41,97%,74%,1)" />
+      <stop offset="19%" stop-color="hsla(41,97%,74%,1)" />
+      <stop offset="63%" stop-color="hsla(349,42%,61%,1)" />
+      <stop offset="100%" stop-color="hsla(222, 53%, 35%, 1)" />
+    </radialGradient>
+  </defs>
+
+  
+  <rect
+    x="0"
+    y="0"
+    rx="15"
+    ry="15"
+    width="1920"
+    height="775"
+    fill="hsla(222, 53%, 35%, 1.0)" />
+  <rect
+    x="0"
+    y="755"
+    rx="15"
+    ry="15"
+    width="1920"
+    height="425"
+    fill="hsla(228, 57%, 30%, 1.0)" />
+  <rect
+    x="0"
+    y="0"
+    rx="15"
+    ry="15"
+    width="1920"
+    height="1200"
+    fill="url(#RadialGradient1)" />
+</svg>
