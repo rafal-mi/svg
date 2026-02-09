@@ -15,12 +15,24 @@ viewBox="0 0 800 800">
         data-darkreader-inline-stopcolor="">
       </stop>
     </linearGradient>
-    <filter id="nnneon-filter" x="-200%" y="-100%" 
+    <filter id="nnneon-filter" x="-100%" y="-100%" 
+      width="400%" height="400%" 
+      filterUnits="objectBoundingBox" 
+      primitiveUnits="userSpaceOnUse" 
+      color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="50 50" 
+        x="0%" y="0%" 
+        width="100%" height="100%" 
+        in="SourceGraphic" 
+        edgeMode="none" result="blur">
+      </feGaussianBlur>
+    </filter>
+    <filter id="nnneon-filter2" x="-200%" y="-100%" 
       width="500%" height="400%" 
       filterUnits="objectBoundingBox" 
       primitiveUnits="userSpaceOnUse" 
       color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="32 0" 
+      <feGaussianBlur stdDeviation="10 40" 
         x="0%" y="0%" 
         width="100%" height="100%" 
         in="SourceGraphic" 
@@ -33,11 +45,12 @@ viewBox="0 0 800 800">
     width="800" height="800" 
     stroke="white" 
     rx="16" ry="16" />
-  <g fill="url(#nnneon-grad)">
-    <rect x="390" y="100" 
-        width="20" height="600"/>
-    <rect x="380" y="100" 
-        width="40" height="600"
-        filter="url(#nnneon-filter)" />
+  <g stroke-width="16" stroke="none" fill="white">
+    <circle
+      cx="400"
+      cy="400"
+      r="100"
+      filter="url(#nnneon-filter)"
+      />
   </g>
 </svg>
