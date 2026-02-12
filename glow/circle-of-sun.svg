@@ -1,14 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" 
 xmlns:xlink="http://www.w3.org/1999/xlink" 
 xmlns:svgjs="http://svgjs.dev/svgjs" 
-viewBox="0 0 800 800">
+viewBox="0 0 800 800"> 
+  <style>
+    :root {
+      --sun-color: white;
+      --sky-color: #fdd87dff; 
+      --cloud-color: #fee390ff;
+    }
+    #g1 {
+      fill: #fbc27e00;
+    }
+  </style>
   <defs>
+    <radialGradient id="RadialGradient1">
+      <stop offset="0%" stop-color="var(--sky-color)" />
+      <stop offset="100%" stop-color="var(--sun-color)" />
+    </radialGradient>
     <filter id="glow-filter" x="-100%" y="-100%" 
       width="400%" height="400%" 
       filterUnits="objectBoundingBox" 
       primitiveUnits="userSpaceOnUse" 
       color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="180 180" 
+      <feGaussianBlur stdDeviation="240 240" 
         x="0%" y="0%" 
         width="100%" height="100%" 
         in="SourceGraphic" 
@@ -19,10 +33,9 @@ viewBox="0 0 800 800">
   <rect 
     x="0" y="0" 
     width="800" height="800"
-    fill="#fbc27e" 
-    stroke="white" 
+    fill="var(--sky-color)" 
     rx="16" ry="16" />
-  <g fill="#fbc27e00">
+  <g fill="url(#RadialGradient1)">
     <circle
       cx="400"
       cy="400"
@@ -32,8 +45,8 @@ viewBox="0 0 800 800">
     <circle
       cx="400"
       cy="400"
-      r="100"
-      fill="#fefef4"
+      r="200"
+      fill="var(--sun-color)"
       />
   </g>
 </svg>
