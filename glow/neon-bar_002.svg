@@ -45,7 +45,7 @@ viewBox="0 0 800 800">
     width="800" height="800" 
     stroke="white" 
     rx="16" ry="16" />
-  <g stroke-width="16" stroke="none" fill="url(#nnneon-grad)">
+  <g fill="url(#nnneon-grad)">
     <rect x="380" y="100" 
       width="40" height="600"
       rx="20" ry="20"
