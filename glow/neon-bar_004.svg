@@ -2,21 +2,27 @@
 xmlns:xlink="http://www.w3.org/1999/xlink" 
 xmlns:svgjs="http://svgjs.dev/svgjs" 
 viewBox="0 0 800 800">
+  <style>
+    :root {
+      --green-color: hsl(157, 100%, 54%);
+      --pink-color: hsl(331, 87%, 61%); 
+    }
+  </style>
   <defs>
     <linearGradient 
       x1="50%" y1="0%" x2="50%" y2="100%" 
       id="nnneon-grad">
-      <stop stop-color="hsl(157, 100%, 54%)" stop-opacity="1" offset="0%" 
+      <stop stop-color="var(--green-color)" stop-opacity="1" offset="0%" 
         style="--darkreader-inline-stopcolor: #00c089;" 
         data-darkreader-inline-stopcolor="">
       </stop>
-      <stop stop-color="hsl(331, 87%, 61%)" stop-opacity="1" offset="100%" 
+      <stop stop-color="var(--pink-color)" stop-opacity="1" offset="100%" 
         style="--darkreader-inline-stopcolor: #9f0b53;" 
         data-darkreader-inline-stopcolor="">
       </stop>
     </linearGradient>
-    <filter id="nnneon-filter" x="-100%" y="-200%" 
-      width="400%" height="400%" 
+    <filter id="nnneon-filter" x="-300%" y="-200%" 
+      width="600%" height="400%" 
       filterUnits="objectBoundingBox" 
       primitiveUnits="userSpaceOnUse" 
       color-interpolation-filters="sRGB">
@@ -46,7 +52,7 @@ viewBox="0 0 800 800">
     stroke="white" 
     rx="16" ry="16"
     />
-  <g fill="url(#nnneon-grad)">
+  <g fill="var(--green-color)">
     <rect x="380" y="100" 
       width="40" height="600"
       rx="20" ry="20"
