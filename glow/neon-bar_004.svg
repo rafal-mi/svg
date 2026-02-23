@@ -9,18 +9,6 @@ viewBox="0 0 800 800">
     }
   </style>
   <defs>
-    <linearGradient 
-      x1="50%" y1="0%" x2="50%" y2="100%" 
-      id="nnneon-grad">
-      <stop stop-color="var(--green-color)" stop-opacity="1" offset="0%" 
-        style="--darkreader-inline-stopcolor: #00c089;" 
-        data-darkreader-inline-stopcolor="">
-      </stop>
-      <stop stop-color="var(--pink-color)" stop-opacity="1" offset="100%" 
-        style="--darkreader-inline-stopcolor: #9f0b53;" 
-        data-darkreader-inline-stopcolor="">
-      </stop>
-    </linearGradient>
     <filter id="nnneon-filter" x="-300%" y="-200%" 
       width="600%" height="400%" 
       filterUnits="objectBoundingBox" 

@@ -13,19 +13,12 @@ viewBox="0 0 800 800">
     }
   </style>
   <defs>
-    <radialGradient id="RadialGradient1"
-      cx="50%" cy="50%" 
-      r="50%">
-      <stop offset="0%" stop-color="var(--sun-color)" />
-      <stop offset="100%" stop-color="var(--sky-color)" 
-      />
-    </radialGradient>
-    <filter id="glow-filter" x="-100%" y="-100%" 
+    <filter id="glow-filter" x="-200%" y="-200%" 
       width="400%" height="400%" 
       filterUnits="objectBoundingBox" 
       primitiveUnits="userSpaceOnUse" 
       color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="240 240" 
+      <feGaussianBlur stdDeviation="50 50" 
         x="0%" y="0%" 
         width="100%" height="100%" 
         in="SourceGraphic" 
@@ -39,11 +32,12 @@ viewBox="0 0 800 800">
     fill="var(--sky-color)" 
     rx="16" ry="16" 
     />
-  <g fill="url(#RadialGradient1)">
+  <g >
     <circle
       cx="400"
       cy="400"
       r="200"
+      fill="var(--sun-color)"
       stroke="white"
       visibility="visible"
       />
@@ -53,7 +47,7 @@ viewBox="0 0 800 800">
       r="200"
       fill="var(--sun-color)"
       filter="url(#glow-filter)"
-      visibility="hidden"
+      visibility="visible"
       />
   </g>
 </svg>
