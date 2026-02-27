@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:svgjs="http://svgjs.dev/svgjs" 
+viewBox="0 0 800 800"> 
+  <style>
+    :root {
+      --sun-color: #ffffffaa;
+      --sky-color-0: #fdd87dff; 
+      --sky-color: #f86f80ff; 
+      --cloud-color: #fee390ff;
+    }
+    #g1 {
+      fill: #fbc27e00;
+    }
+  </style>
+  <defs>
+    <filter id="glow-filter" x="-200%" y="-200%" 
+      width="400%" height="400%" 
+      filterUnits="objectBoundingBox" 
+      primitiveUnits="userSpaceOnUse" 
+      color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10 10" 
+        x="-200%" y="0%" 
+        width="400%" height="50%" 
+        in="SourceGraphic" 
+        edgeMode="none" result="blur">
+      </feGaussianBlur>
+    </filter>
+  </defs>
+  <rect 
+    x="0" y="0" 
+    width="800" height="800"
+    fill="var(--sky-color)" 
+    rx="16" ry="16" 
+    />
+  <g >
+    <circle
+      cx="400"
+      cy="400"
+      r="200"
+      fill="var(--sun-color)"
+      stroke="white"
+      visibility="hidden"
+      />
+    <circle
+      cx="400"
+      cy="400"
+      r="200"
+      fill="var(--sun-color)"
+      stroke="red"
+      filter="url(#glow-filter)"
+      visibility="visible"
+      />
+  </g>
+</svg>
