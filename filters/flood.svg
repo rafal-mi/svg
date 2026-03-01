@@ -1,27 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800">
+<svg xmlns="http://www.w3.org/2000/svg" 
+  width="800" height="800">
   <defs>
     <filter id="floodFilter"
       x="0%"
       y="0%"
-      width="100%"
+      width="50%"
       height="100%" 
-      filterUnits="objectBoundingBox">
+      filterUnits_="boundingBox"
+      filterUnits="userSpaceOnUse"
+      >
       <feFlood
         x="0%"
         y="0%"
         width="100%"
         height="100%"
-        flood-color="orange"
-        flood-opacity="0.5" />
+        flood-color="red"
+        flood-opacity="0.5" 
+        />
     </filter>
   </defs>
 
+  <!-- <use filter="url(#floodFilter)" /> -->
+
+  <rect x="0" y="0" width="800" height="800"
+  />  
+
   <rect 
-    x="100"
-    y="100"
-    width="100" 
-    height="100" 
-    fill="url(#floodFilter)"
-    fill="yellow"
+    x="200"
+    y="200"
+    width="200" 
+    height="200" 
+    fill="white"
+    filter="url(#floodFilter)"
+    visibility="visible"
+    />
+  <rect 
+    x="200"
+    y="200"
+    width="200"
+    height="200"
+    fill="transparent"
+    stroke="white" 
+    visibility="visible"
     />
 </svg>
