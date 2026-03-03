@@ -3,9 +3,9 @@
   <defs>
     <filter id="floodFilter"
       x="0%"
-      y="0%"
+      y="50%"
       width="50%"
-      height="100%" 
+      height="25%" 
       filterUnits_="boundingBox"
       filterUnits="userSpaceOnUse"
       >
