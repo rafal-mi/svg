@@ -2,18 +2,16 @@
   width="800" height="800">
   <defs>
     <filter id="floodFilter"
-      x="0%"
-      y="50%"
-      width="50%"
-      height="25%" 
-      filterUnits_="boundingBox"
-      filterUnits="userSpaceOnUse"
+      x="-100%" y="0%"
+      width="300%" height="100%" 
+      filterUnits="objectBoundingBox"
+      filterUnits_="userSpaceOnUse"
+      primitiveUnits="objectBoundingBox"
+      primitiveUnits_="userSpaceOnUse"
       >
       <feFlood
-        x="0%"
-        y="0%"
-        width="100%"
-        height="100%"
+        x="-50%" y="0%"
+        width="200%" height="100%"
         flood-color="red"
         flood-opacity="0.5" 
         />
@@ -26,8 +24,8 @@
   />  
 
   <rect 
-    x="200"
-    y="200"
+    x="300"
+    y="300"
     width="200" 
     height="200" 
     fill="white"
@@ -35,8 +33,8 @@
     visibility="visible"
     />
   <rect 
-    x="200"
-    y="200"
+    x="300"
+    y="300"
     width="200"
     height="200"
     fill="transparent"
