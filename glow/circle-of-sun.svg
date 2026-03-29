@@ -47,6 +47,8 @@ viewBox="0 0 800 800">
     />
   <g>
     <circle
+      id="sun-glow"
+      inkscape:label="sun-glow"
       cx="400"
       cy="400"
       r="300"
@@ -55,6 +57,7 @@ viewBox="0 0 800 800">
       visibility="visible"
       />
     <circle
+      id="sun"
       cx="400"
       cy="400"
       r="200"
